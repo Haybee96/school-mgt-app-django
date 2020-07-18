@@ -25,7 +25,7 @@ SECRET_KEY = 'n^h%0^#1%i)fgwq&tjti^+mrm_zc^+2f#jj@f03=9dtf_ju0jh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com']
+ALLOWED_HOSTS = ['.herokuapp.com/sms']
 
 
 # Application definition
