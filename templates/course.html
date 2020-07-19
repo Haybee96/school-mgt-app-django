@@ -3,30 +3,32 @@
 <div class="course-registration-form mt-5">
   <h3 class="mb-4">Registered Courses: {{ count }}</h3>
   {% if courses %}
-  <table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">S/N</th>
-        <th scope="col">Title</th>
-        <th scope="col">Code</th>
-        <th scope="col">Units</th>
-        <th scope="col">Student Registered</th>
-        <th scope="col">Created</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for course in courses %}
-      <tr>
-        <th scope="row">{{ forloop.counter }}</th>
-        <td>{{ course.title }}</td>
-        <td>{{ course.code }}</td>
-        <td>{{ course.unit }}</td>
-        <td>{{ course.student }}</td>
-        <td>{{ course.created }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+  <div class="table-responsive">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">S/N</th>
+          <th scope="col">Title</th>
+          <th scope="col">Code</th>
+          <th scope="col">Units</th>
+          <th scope="col">Student Registered</th>
+          <th scope="col">Created</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for course in courses %}
+        <tr>
+          <th scope="row">{{ forloop.counter }}</th>
+          <td>{{ course.title }}</td>
+          <td>{{ course.code }}</td>
+          <td>{{ course.unit }}</td>
+          <td>{{ course.student }}</td>
+          <td>{{ course.created }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
   <div class="pagination">
     <span class="step-links">
       {% if courses.has_previous %}
